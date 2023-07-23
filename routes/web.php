@@ -18,5 +18,6 @@ Route::get('/acerca-de', [AcercadeController::class, 'mostrarInformacion']);
 
 Route::get('/', function () {
     return '<h1>Página de Inicio</h1>';
+
+Route::get('/ejemplo', [ExampleController::class, 'nombreDelMetodo']);
 });
-https://github.com/jrjhon06/FinalPMN.git
