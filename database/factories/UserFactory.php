@@ -5,9 +5,14 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
- */
+$factory->define(App\Models\Post::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->numberBetween(1, 20), // Valor aleatorio entre 1 y 20
+        'titulo' => $faker->sentence, // Título generado por la librería Faker
+        'slug' => $faker->slug, // Slug generado por la librería Faker
+        'contenido' => $faker->text // Contenido generado por la librería Faker
+    ];
+});
 class UserFactory extends Factory
 {
     /**
